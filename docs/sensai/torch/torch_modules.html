@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torch_modules &mdash; sensAI 0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="torch_opt" href="torch_opt.html" />
+    <link rel="prev" title="torch_models" href="torch_models.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> sensAI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Guides and Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started.html">Getting started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../catboost.html">catboost</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clustering.html">clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../columngen.html">columngen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_ingest.html">data_ingest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_transformation.html">data_transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distance_metric.html">distance_metric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ensemble.html">ensemble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../evaluation.html">evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../featuregen.html">featuregen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hyperopt.html">hyperopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lightgbm.html">lightgbm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../local_search.html">local_search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../naive_bayes.html">naive_bayes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nearest_neighbors.html">nearest_neighbors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../normalisation.html">normalisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sklearn.html">sklearn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tensorflow.html">tensorflow</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../torch.html">torch</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="torch_base.html">torch_base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="torch_data.html">torch_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="torch_models.html">torch_models</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">torch_modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="torch_opt.html">torch_opt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="torchtext.html">torchtext</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tracking.html">tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../util.html">util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vector_model.html">vector_model</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">sensAI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Modules</a> &raquo;</li>
+        
+          <li><a href="../torch.html">torch</a> &raquo;</li>
+        
+      <li>torch_modules</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/sensai/torch/torch_modules.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-sensai.torch.torch_modules">
+<span id="torch-modules"></span><h1>torch_modules<a class="headerlink" href="#module-sensai.torch.torch_modules" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sensai.torch.torch_modules.MCDropoutCapableNNModule">
+<em class="property">class </em><code class="sig-name descname">MCDropoutCapableNNModule</code><a class="reference external" href="https://github.com/jambit/sensAI/blob/master/src/sensai/torch/torch_modules.py#L10"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensai.torch.torch_modules.MCDropoutCapableNNModule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Base class for NN modules that are to support MC-Dropout.
+Support can be added by applying the _dropout function in the module’s forward method.
+Then, to apply inference that samples results, call inferMCDropout rather than just using __call__.</p>
+<dl class="method">
+<dt id="sensai.torch.torch_modules.MCDropoutCapableNNModule.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensai.torch.torch_modules.MCDropoutCapableNNModule.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensai.torch.torch_modules.MCDropoutCapableNNModule.inferMCDropout">
+<code class="sig-name descname">inferMCDropout</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">numSamples</em>, <em class="sig-param">p=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sensai.torch.torch_modules.MCDropoutCapableNNModule.inferMCDropout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies inference using MC-Dropout, drawing the given number of samples.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – the model input</p></li>
+<li><p><strong>numSamples</strong> – the number of samples to draw with MC-Dropout</p></li>
+<li><p><strong>p</strong> – the dropout probability to apply, overriding the probability specified by the model’s forward method; if None, use model’s default</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a pair (y, sd) where y the mean output tensor and sd is a tensor of the same dimension containing standard deviations</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sensai.torch.torch_modules.MultiLayerPerceptron">
+<em class="property">class </em><code class="sig-name descname">MultiLayerPerceptron</code><span class="sig-paren">(</span><em class="sig-param">inputDim</em>, <em class="sig-param">outputDim</em>, <em class="sig-param">hiddenDims</em>, <em class="sig-param">hidActivationFn=torch.sigmoid</em>, <em class="sig-param">outputActivationFn=torch.sigmoid</em>, <em class="sig-param">pDropout=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/jambit/sensAI/blob/master/src/sensai/torch/torch_modules.py#L74"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensai.torch.torch_modules.MultiLayerPerceptron" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#sensai.torch.torch_modules.MCDropoutCapableNNModule" title="sensai.torch.torch_modules.MCDropoutCapableNNModule"><code class="xref py py-class docutils literal notranslate"><span class="pre">sensai.torch.torch_modules.MCDropoutCapableNNModule</span></code></a></p>
+<dl class="method">
+<dt id="sensai.torch.torch_modules.MultiLayerPerceptron.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">inputDim</em>, <em class="sig-param">outputDim</em>, <em class="sig-param">hiddenDims</em>, <em class="sig-param">hidActivationFn=torch.sigmoid</em>, <em class="sig-param">outputActivationFn=torch.sigmoid</em>, <em class="sig-param">pDropout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sensai.torch.torch_modules.MultiLayerPerceptron.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensai.torch.torch_modules.MultiLayerPerceptron.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#sensai.torch.torch_modules.MultiLayerPerceptron.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sensai.torch.torch_modules.LSTNetwork">
+<em class="property">class </em><code class="sig-name descname">LSTNetwork</code><span class="sig-paren">(</span><em class="sig-param">numInputTimeSlices</em>, <em class="sig-param">inputDimPerTimeSlice</em>, <em class="sig-param">numOutputTimeSlices=1</em>, <em class="sig-param">outputDimPerTimeSlice=1</em>, <em class="sig-param">numConvolutions: int = 100</em>, <em class="sig-param">numCnnTimeSlices: int = 6</em>, <em class="sig-param">hidRNN: int = 100</em>, <em class="sig-param">skip: int = 0</em>, <em class="sig-param">hidSkip: int = 5</em>, <em class="sig-param">hwWindow: int = 0</em>, <em class="sig-param">hwCombine: str = 'plus'</em>, <em class="sig-param">dropout=0.2</em>, <em class="sig-param">outputActivation='sigmoid'</em>, <em class="sig-param">isClassification=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/jambit/sensAI/blob/master/src/sensai/torch/torch_modules.py#L111"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensai.torch.torch_modules.LSTNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#sensai.torch.torch_modules.MCDropoutCapableNNModule" title="sensai.torch.torch_modules.MCDropoutCapableNNModule"><code class="xref py py-class docutils literal notranslate"><span class="pre">sensai.torch.torch_modules.MCDropoutCapableNNModule</span></code></a></p>
+<p>Network for (auto-regressive) time-series prediction with long- and short-term dependencies as proposed by G. Lai et al.
+It applies two parallel paths to a time series of size (numInputTimeSlices, inputDimPerTimeSlice):</p>
+<blockquote>
+<div><ul>
+<li><p>Complex path with the following stages:</p>
+<blockquote>
+<div><ul>
+<li><p>Convolutions on the time series input data (CNNs):
+For a CNN with numCnnTimeSlices (= kernel size), it produces an output series of size numInputTimeSlices-numCnnTimeSlices+1.
+If the number of parallel convolutions is numConvolutions, the total output size of this stage is thus
+numConvolutions*(numInputTimeSlices-numCnnTimeSlices+1)</p></li>
+<li><p>Two RNN components which process the CNN output in parallel:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>RNN (GRU)
+The output dimension of this stage is the hidden state of the GRU after seeing the entire
+input data from the previous stage, i.e. if has size hidRNN.</p></li>
+<li><p>Skip-RNN (GRU), which processes time series elements that are ‘skip’ time slices apart.
+It does this by grouping the input such that ‘skip’ GRUs are applied in parallel, which all use the same parameters.
+If the hidden state dimension of each GRU is hidSkip, then the output size of this stage is skip*hidSkip.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Dense layer</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Direct regression dense layer (so-called “highway” path).</p></li>
+</ul>
+</div></blockquote>
+<p>The model ultimately combines the outputs of these two paths via a combination function.
+Many parts of the model are optional and can be completely disabled.
+The model can produce one or more (potentially multi-dimensional) outputs, where each output typically typically corresponds
+to a time slice for which a prediction is made.</p>
+<p>The model expects as input a tensor of size (batchSize, numInputTimeSlices, inputDimPerTimeSlice).
+As output, the model will produce a tensor of size (batchSize, numOutputTimeSlices, outputDimPerTimeSlice)
+if isClassification==False (default) and a tensor of size (batchSize, outputDimPerTimeSlice=numClasses, numOutputTimeSlices)
+if isClassification==True; the latter shape matches what is required by the multi-dimensional case of loss function
+CrossEntropyLoss, for example, and therefore is suitable for classification use cases.</p>
+<dl class="method">
+<dt id="sensai.torch.torch_modules.LSTNetwork.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">numInputTimeSlices</em>, <em class="sig-param">inputDimPerTimeSlice</em>, <em class="sig-param">numOutputTimeSlices=1</em>, <em class="sig-param">outputDimPerTimeSlice=1</em>, <em class="sig-param">numConvolutions: int = 100</em>, <em class="sig-param">numCnnTimeSlices: int = 6</em>, <em class="sig-param">hidRNN: int = 100</em>, <em class="sig-param">skip: int = 0</em>, <em class="sig-param">hidSkip: int = 5</em>, <em class="sig-param">hwWindow: int = 0</em>, <em class="sig-param">hwCombine: str = 'plus'</em>, <em class="sig-param">dropout=0.2</em>, <em class="sig-param">outputActivation='sigmoid'</em>, <em class="sig-param">isClassification=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sensai.torch.torch_modules.LSTNetwork.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>numInputTimeSlices</strong> – the number of input time slices</p></li>
+<li><p><strong>inputDimPerTimeSlice</strong> – the dimension of the input data per time slice</p></li>
+<li><p><strong>numOutputTimeSlices</strong> – the number of time slices predicted by the model</p></li>
+<li><p><strong>outputDimPerTimeSlice</strong> – the number of dimensions per output time slice. While this is the number of
+target variables per time slice for regression problems, this must be the number of classes for classification problems.</p></li>
+<li><p><strong>numCnnTimeSlices</strong> – the number of time slices considered by each convolution (i.e. it is one of the dimensions of the matrix used for
+convolutions, the other dimension being inputDimPerTimeSlice), a.k.a. “Ck”</p></li>
+<li><p><strong>numConvolutions</strong> – the number of separate convolutions to apply, i.e. the number of independent convolution matrices, a.k.a “hidC”;
+if it is 0, then the entire complex processing path is not applied.</p></li>
+<li><p><strong>hidRNN</strong> – the number of hidden output dimensions for the RNN stage</p></li>
+<li><p><strong>skip</strong> – the number of time slices to skip for the skip-RNN. If it is 0, then the skip-RNN is not used.</p></li>
+<li><p><strong>hidSkip</strong> – the number of output dimensions of each of the skip parallel RNNs</p></li>
+<li><p><strong>hwWindow</strong> – the number of time slices from the end of the input time series to consider as input for the highway component.
+If it is 0, the highway component is not used.</p></li>
+<li><p><strong>hwCombine</strong> – {“plus”, “product”, “bilinear”} the function with which the highway component’s output is combined with the complex path’s output</p></li>
+<li><p><strong>dropout</strong> – the dropout probability to use during training (dropouts are applied after every major step in the evaluation path)</p></li>
+<li><p><strong>outputActivation</strong> – the output activation function</p></li>
+<li><p><strong>isClassification</strong> – whether the model is to serve as a classifier, in which case the output tensor dimension ordering is adapted
+to suit loss functions such as CrossEntropyLoss</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensai.torch.torch_modules.LSTNetwork.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#sensai.torch.torch_modules.LSTNetwork.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="torch_opt.html" class="btn btn-neutral float-right" title="torch_opt" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="torch_models.html" class="btn btn-neutral float-left" title="torch_models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
